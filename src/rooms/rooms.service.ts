@@ -15,7 +15,7 @@ export class RoomsService {
   async createRoom(createRoomDto: CreateRoomDto) {
     const newRoom = new this.roomModel();
     newRoom.code = createRoomDto.code;
-    newRoom.hostSocketId = createRoomDto.hostSocketId;
+    newRoom.host = createRoomDto.host;
     const room = await this.roomModel.create(newRoom);
     return room;
   }

@@ -27,8 +27,8 @@ export class Room {
   @Prop({ type: String })
   code: string;
 
-  @Prop({ type: String })
-  hostSocketId: string;
+  @Prop()
+  host: Participant;
 
   @Prop({ type: [String] })
   languages: string[];
