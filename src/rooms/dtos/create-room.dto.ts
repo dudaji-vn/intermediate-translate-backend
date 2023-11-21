@@ -6,6 +6,8 @@ import {
   IsString,
 } from 'class-validator';
 
+import { Participant } from 'src/types/participant';
+
 export class CreateRoomDto {
   @IsString()
   @IsNotEmpty()
@@ -13,7 +15,7 @@ export class CreateRoomDto {
 
   @IsString()
   @IsNotEmpty()
-  hostSocketId: string;
+  host: Participant;
 
   @IsArray()
   @ArrayMinSize(2)
